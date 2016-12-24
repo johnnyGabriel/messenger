@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "bluebird": "^3.4.6",
+    "express": "^4.14.0",
     "mongo-oplog": "^2.0.2",
     "mongo-triggers": "^0.0.5",
     "mongojs": "^2.4.0",
