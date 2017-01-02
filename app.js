@@ -9,4 +9,4 @@ mongoose.connect( config.mongoDbSrv + '/test' )
 
 oplog.on('insert', filter => wss.broadcast(JSON.stringify(filter.o)))
 
-console.log("running web socket app...");
+console.log("running web socket app in ws://localhost:8080...");

@@ -26,10 +26,7 @@ const socketMessageHandler = message => {
 
     console.log("socket received message");
 
-    Message.insert({
-        user: 'johnny',
-        text: message
-    })
+    Message.insert( JSON.parse(message) )
         .then(doc =>
             console.log("doc inserido na collection messages" + doc))
         .catch(err => 
