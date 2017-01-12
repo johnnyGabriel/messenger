@@ -3,7 +3,7 @@ const MongoOplog = require('mongo-oplog')
 const wss = require('./websocket')
 
 const oplog = MongoOplog(
-        config.mongoDbSrv + '/local', { ns: 'test.messages' }
+        config.mongoSrv + '/local', { ns: 'test.messages' }
     )
 
 oplog.tail()

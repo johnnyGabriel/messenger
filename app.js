@@ -5,7 +5,7 @@ const oplog = require('./oplog')
 const wss = require('./websocket')
 
 mongoose.Promise = require('bluebird')
-mongoose.connect( config.mongoDbSrv + '/test' )
+mongoose.connect( config.mongoDb )
 
 oplog.on('insert', filter => wss.broadcast(JSON.stringify(filter.o)))
 
